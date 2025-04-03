@@ -11,6 +11,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+.dark-mode{
+    
+    background-color: #131313;
+}
 header{
     width: 100%;
     height: 75px;
@@ -173,4 +177,12 @@ hr {
 .container li{
     font-size: 1.3rem;
     margin-top: 30px;
+}
+.darkbtn{
+    color: #eee;
+    filter: drop-shadow(1px 1px 1px #000);
+    cursor: pointer;
+}
+.darkbtn:hover{
+    color: aquamarine;
 }

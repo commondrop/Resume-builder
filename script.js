@@ -36,3 +36,31 @@ function generatePDF() {
 
     doc.save("resume.pdf");
 }
+
+const darkbtn = document.querySelector(".darkbtn");
+const body = document.querySelector("body");
+const header = document.querySelector("header");
+
+document.addEventListener("DOMContentLoaded", () => {
+    const darkbtn = document.querySelector(".darkbtn");
+    const body = document.body;
+    const header = document.querySelector("header"); // Ensure header selection
+
+    // Load dark mode preference from localStorage
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        header.classList.add("dark-mode");
+    }
+
+    darkbtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        header.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+        }
+    });
+});
+
