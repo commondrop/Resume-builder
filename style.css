@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 1px 0 4px #000;
+}
+header h2{
+    font-size: 2rem;
+    color: #fff;
+    margin-left: 20%;
+    text-shadow: 1px 1px 3px #000;
+}
+header h2 span{
+    color: aquamarine;
+}
+header ul{
+    display: flex;
+    align-items: center;
+    margin-right: 20%;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    font-size: 1.5rem;                                                                           
+    margin-right: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    position: relative;
+    
+}
+header ul li a::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: aquamarine;
+}
+header ul li a:hover{
+    color: aquamarine;
+}
+header ul li a:hover::after{
+    width: 100%;
+    transition: .4s;
+}
+
+#resume-builder {
+    background: #fff;
+    padding: 20px;
+    max-width: 700px;
+    margin-top: 2%;
+    box-shadow: 0px 3px 4px #000;
+    border-radius: 10px;
+}
+#resume-builder h1{
+    font-size: 2rem;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 10px 0;
+}
+
+button:hover {
+    background: #218838;
+}
+
+#resume-preview {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.resume-format {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.resume-header {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.resume-contact {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.resume-section {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.resume-section h2 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+hr {
+    margin: 15px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Classic style */
+.style1 {
+    font-family: 'Georgia', serif;
+    color: black;
+}
+
+/* Modern style */
+.style2 {
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+}

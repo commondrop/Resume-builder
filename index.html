@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h2>A<span>Resume</span>Builder</h2>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Github</a></li>
+        </ul>
+    </header>
+    <div id="resume-builder">
+        <h1>Personal info</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="Enter your phone">
+        
+        <label for="experience">Employment History:</label>
+        <textarea id="experience" placeholder="Enter your employment history"></textarea>
+
+        <label for="education">Education:</label>
+        <textarea id="education" placeholder="Enter your education"></textarea>
+        
+        <label for="style">Choose Style:</label>
+        <select id="style" onchange="applyStyle()">
+            <option value="style1">Classic</option>
+            <option value="style2">Modern</option>
+        </select>
+        
+        
+        
+        <div id="resume-preview" class="resume-format">
+            <h1 id="preview-name" class="resume-header"></h1>
+            <p id="preview-email" class="resume-contact"></p>
+            <p id="preview-phone" class="resume-contact"></p>
+            <hr>
+            <h2>Employment History</h2>
+            <p id="preview-experience" class="resume-section"></p>
+            <hr>
+            <h2>Education</h2>
+            <p id="preview-education" class="resume-section"></p>
+        </div>
+        <button onclick="generatePDF()">Download as PDF</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
